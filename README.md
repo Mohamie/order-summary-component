@@ -2,6 +2,6 @@
 
 ### Screenshot
 
-![](./design/screenshot-desktop.png)
-![](./design/screenshot-mobile.png)
+![](./design/desktop-screenshot.png)
+![](./design/mobile-screenshot.png)
 
