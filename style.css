@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;600;700&family=Outfit:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --primary-bg-color: hsl(224, 23%, 55%);
+    --button-color: hsl(245, 75%, 52%);
+    --card-bg-color: hsl(0, 0%, 100%);
+    --secondary-text-color: hsl(228, 12%, 48%);
+    --text-light-color: hsl(0, 0%, 100%);
+    --text-dark-color: hsl(223, 47%, 23%);
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.6rem;
+    background-image: url(images/pattern-background-mobile.svg);
+    background-color: var(--primary-bg-color);
+    background-repeat: repeat-x;
+}
+
+@media (min-width: 376px){
+    body{
+        background-image: url(images/pattern-background-desktop.svg);
+    }
+}
+
+.card{
+    max-width: 35rem;
+    background-color: var(--card-bg-color);
+    text-align: center;
+    border-radius: 1.5rem;
+    box-shadow: 0px 30px 30px 10px rgba(56, 41, 224, 0.18);
+
+}
+
+@media (min-width: 769px){
+    .card{
+        max-width: 40rem;
+
+    }
+}
+
+.card__image{
+    width: 100%;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.card__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+.card__header, .plan{
+    font-weight: 900;
+}
+
+.card__header, .card__description{
+    margin: 0;
+}
+
+ .card__description{
+    color: var(--secondary-text-color);
+    line-height: 1.5;
+ }
+
+.card__subscription{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    border-radius: 1rem;
+    background-color: hsl(225, 100%, 98%);
+}
+
+.card__subscription p{
+    margin: 0;
+}
+
+.card__subscription .plan{
+    margin-bottom: .5rem;
+    white-space: nowrap;
+}
+
+.card__subscription .pricing{
+    margin-inline: 2rem 3.5rem;
+}
+
+@media (min-width: 769px){
+    .card__subscription .pricing{
+        margin-inline: 3rem 6rem;
+    }
+}
+
+.card__subscription .change{
+    font-weight: 700;
+}
+
+.card__cta{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--secondary-text-color);
+    transition: color .2s ease-in;
+
+}
+
+.card__cta.proceed{
+    width: 80%;
+    padding: 1.5rem 3rem;
+    color: var(--text-light-color);
+    border-radius: 1rem;
+    background-color: var(--button-color);
+    box-shadow: 0px 30px 30px 10px rgba(56, 41, 224, 0.18);
+    transition: background-color .2s ease-in;
+}
+
+.card__cta.proceed:hover{
+    background-color: var(--text-dark-color);
+}
+
+.card__cta.cancel:hover, .change:hover{
+    color: var(--button-color);
+}
+
+.change:hover{
+    text-decoration: none;
+}
+
+footer{
+    font-weight: 700;
+}
+footer a{
+    color: var(--button-color);
+}
+
+
+
+
+
+
+
+
